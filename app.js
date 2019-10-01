@@ -307,7 +307,7 @@ app.delete('/api/courses/:id', authenticateUser,
           }
         })
 );
-
+//-----
 // returns all courses including the user that owns each course for the provided course ID
 app.get('/api/courses/:id', asyncHandler(async (req, res) => {
       let id = req.params.id;
@@ -338,7 +338,7 @@ app.use((err, req, res, next) => {
 });
 
 // set our port
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 5000);
 
 // start listening on our port
 const server = app.listen(app.get('port'), () => {
